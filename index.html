@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>MARIKO AIDA | Artist Portfolio</title>
+    
+    <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="images/favicon/favicon-32.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@300;400&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#d7d4d3",
+                        "on-primary-container": "#525151",
+                        "primary-dim": "#535252",
+                        "on-tertiary": "#fcf8f3",
+                        "surface-variant": "#e0e3e0",
+                        "on-error-container": "#752121",
+                        "on-primary": "#faf7f6",
+                        "on-tertiary-container": "#5d5c58",
+                        "secondary-fixed-dim": "#d7d4d0",
+                        "on-background": "#2f3331",
+                        "on-secondary-container": "#52524f",
+                        "primary-container": "#e5e2e1",
+                        "outline-variant": "#afb3b0",
+                        "inverse-primary": "#ffffff",
+                        "surface-container-high": "#e6e9e6",
+                        "surface-dim": "#d6dbd7",
+                        "on-tertiary-fixed-variant": "#676662",
+                        "tertiary-container": "#f6f3ed",
+                        "on-surface-variant": "#5c605d",
+                        "tertiary-dim": "#54534f",
+                        "surface-container-low": "#f3f4f1",
+                        "secondary": "#605f5c",
+                        "surface-tint": "#5f5e5e",
+                        "on-primary-fixed": "#403f3f",
+                        "tertiary": "#605f5b",
+                        "surface-container-highest": "#e0e3e0",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#9d9d9b",
+                        "error-container": "#fe8983",
+                        "secondary-container": "#e5e2de",
+                        "surface": "#faf9f7",
+                        "error": "#9f403d",
+                        "error-dim": "#4e0309",
+                        "tertiary-fixed-dim": "#e8e5df",
+                        "inverse-surface": "#0d0e0e",
+                        "on-secondary-fixed": "#403f3d",
+                        "secondary-dim": "#545350",
+                        "secondary-fixed": "#e5e2de",
+                        "surface-container": "#edeeeb",
+                        "on-tertiary-fixed": "#4a4a46",
+                        "on-secondary-fixed-variant": "#5c5b58",
+                        "primary-fixed": "#e5e2e1",
+                        "background": "#faf9f7",
+                        "on-error": "#fff7f6",
+                        "outline": "#777c79",
+                        "on-secondary": "#fcf8f4",
+                        "on-primary-fixed-variant": "#5c5b5b",
+                        "primary": "#5f5e5e",
+                        "surface-bright": "#faf9f7",
+                        "on-surface": "#2f3331",
+                        "tertiary-fixed": "#f6f3ed"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif JP", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Space Grotesk", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif JP', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-vertical { writing-mode: vertical-rl; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f7]/80 dark:bg-[#2f3331]/80 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-6 md:py-8">
+    <a class="font-headline text-xl md:text-2xl tracking-[0.2em] text-[#2f3331] dark:text-[#faf9f7]" href="#">MARIKO AIDA</a>
+    <div class="flex items-center space-x-8">
+        <div class="hidden md:flex space-x-8 font-label tracking-widest uppercase text-sm">
+            <a class="text-[#2f3331] dark:text-white border-b border-[#2f3331] pb-1 hover:text-[#2f3331] transition-colors duration-500" href="#gallery">Gallery</a>
+            <a class="text-[#5f5e5e]/60 dark:text-[#e5e2e1]/60 hover:text-[#2f3331] transition-colors duration-500" href="#exhibitions">Exhibitions</a>
+            <a class="text-[#5f5e5e]/60 dark:text-[#e5e2e1]/60 hover:text-[#2f3331] transition-colors duration-500" href="#profile">Studio</a>
+            <a class="text-[#5f5e5e]/60 dark:text-[#e5e2e1]/60 hover:text-[#2f3331] transition-colors duration-500" href="#contact">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3 font-label text-xs tracking-widest border-l border-outline-variant/30 pl-8">
+            <button class="text-on-background font-bold border-b border-on-background"></button>
+            <span class="text-outline-variant/30">|</span>
+            <button class="text-on-surface-variant hover:text-on-background transition-colors"></button>
+        </div>
+        <button class="md:hidden text-on-background">
+            <span class="material-symbols-outlined" data-icon="menu">menu</span>
+        </button>
+    </div>
+</nav>
+
+<aside class="fixed left-0 top-0 h-screen w-20 flex-col hidden lg:flex items-center justify-center space-y-12 bg-[#faf9f7] dark:bg-[#2f3331] z-40 border-r border-outline-variant/10">
+    <div class="flex flex-col items-center space-y-12 font-label text-[10px] tracking-tighter uppercase text-[#5f5e5e] dark:text-[#e5e2e1]">
+        <a class="flex flex-col items-center group" href="#gallery">
+            <span class="material-symbols-outlined text-[#2f3331] dark:text-white scale-110 mb-2" data-icon="grid_view">grid_view</span>
+            <span class="text-vertical">Selected Works</span>
+        </a>
+        <a class="flex flex-col items-center opacity-40 hover:opacity-100 transition-all group" href="#biography">
+            <span class="material-symbols-outlined mb-2" data-icon="auto_stories">auto_stories</span>
+            <span class="text-vertical">Process</span>
+        </a>
+        <a class="flex flex-col items-center opacity-40 hover:opacity-100 transition-all group" href="#profile">
+            <span class="material-symbols-outlined mb-2" data-icon="person_outline">person_outline</span>
+            <span class="text-vertical">Biography</span>
+        </a>
+        <a class="flex flex-col items-center opacity-40 hover:opacity-100 transition-all group" href="#exhibitions">
+            <span class="material-symbols-outlined mb-2" data-icon="menu_book">menu_book</span>
+            <span class="text-vertical">Press</span>
+        </a>
+        <a class="flex flex-col items-center opacity-40 hover:opacity-100 transition-all group" href="#contact">
+            <span class="material-symbols-outlined mb-2" data-icon="mail">mail</span>
+            <span class="text-vertical">Inquiry</span>
+        </a>
+    </div>
+</aside>
+
+<main class="lg:pl-20">
+    <section class="min-h-screen flex flex-col justify-center items-start px-6 md:px-24 py-32 relative overflow-hidden">
+        <div class="z-10 max-w-4xl">
+            <h1 class="text-5xl md:text-8xl font-headline mb-4 tracking-tighter leading-tight text-on-background">
+                MARIKO <br/> AIDA
+            </h1>
+            <p class="font-headline text-2xl md:text-3xl text-on-surface-variant mb-8 tracking-widest opacity-80">相田 麻里子</p>
+            <p class="text-xl md:text-2xl font-body font-light text-on-surface-variant leading-relaxed max-w-2xl mb-12 border-l-2 border-primary pl-8">
+                Welcome to my artist portfolio, a heartfelt space where you can join me on my journey and discover expressions that push beyond the ordinary...
+            </p>
+        </div>
+        <div class="w-full h-[614px] md:h-[819px] mt-12 md:absolute md:top-1/2 md:right-0 md:-translate-y-1/2 md:w-1/2 md:mt-0">
+            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl" alt="Main Visual - Abstract Painting" src="images/hero/hero.webp"/>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-24 bg-surface-container-low" id="gallery">
+        <div class="mb-20 flex items-end justify-between">
+            <h2 class="text-4xl md:text-6xl font-headline tracking-widest uppercase">GALLERY</h2>
+            <span class="font-label text-sm tracking-widest text-outline">SELECTED OIL WORKS / 2023-2025</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+            <div class="flex flex-col space-y-6 group">
+                <div class="aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 border-[0.5px] border-outline-variant/20" alt="Work 1" src="images/works/01.webp"/>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-headline mb-1">The unknown planet in Cosmo.</h3>
+                        <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Oil on Canvas, 220mm×273mm</p>
+                    </div>
+                    <span class="font-label text-xs py-1 px-3 border border-outline-variant">2023
+</span>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-6 group">
+                <div class="aspect-[3/4] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 border-[0.5px] border-outline-variant/20" alt="Work 2" src="images/works/02.webp"/>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-headline mb-1">I love NY</h3>
+                        <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Oil on Canvas, 606mm×500mm</p>
+                    </div>
+                    <span class="font-label text-xs py-1 px-3 border border-outline-variant">2023</span>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-6 group">
+                <div class="aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 border-[0.5px] border-outline-variant/20" alt="Work 3" src="images/works/03.webp"/>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-headline mb-1">The flower</h3>
+                        <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Oil on Canvas, 220mm×273mm</p>
+                    </div>
+                    <span class="font-label text-xs py-1 px-3 border border-outline-variant">2023</span>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-6 group">
+                <div class="aspect-[4/5] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 border-[0.5px] border-outline-variant/20" alt="Work 4" src="images/works/04.webp"/>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-headline mb-1">Rebirth</h3>
+                        <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Oil on Canvas, 652mm×530mm</p>
+                    </div>
+                    <span class="font-label text-xs py-1 px-3 border border-outline-variant">2026</span>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-6 group">
+                <div class="aspect-[16/9] overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 border-[0.5px] border-outline-variant/20" alt="Work 5" src="images/works/05.webp"/>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-headline mb-1">恋する孔雀</h3>
+                        <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Oil on Canvas, 652mm×530mm</p>
+                    </div>
+                    <span class="font-label text-xs py-1 px-3 border border-outline-variant">2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-start" id="profile">
+        <div class="md:col-span-5 mb-12 md:mb-0">
+            <div class="sticky top-32">
+                <h2 class="text-4xl md:text-6xl font-headline tracking-widest uppercase mb-12">PROFILE</h2>
+                <div class="bg-surface-container-high p-4 inline-block mb-8">
+                    <img class="w-full aspect-[3/4] object-cover" alt="Artist Portrait" src="images/profile/profile.webp"/>
+                </div>
+                <div class="font-label text-sm uppercase tracking-[0.2em] space-y-4">
+                    <div>
+                        <p class="text-primary font-bold">Born in Japan.</p>
+                        <p class="text-on-surface-variant">Based in Tokyo, Japan.</p>
+                        <p class="text-on-surface-variant">San Francisco Art Institute, BFA</p>
+                    </div>
+                    <div class="pt-4 border-t border-outline-variant/30">
+                        <p class="text-primary font-bold">相田 麻里子</p>
+                        <p class="text-on-surface-variant">日本生まれ、東京在住</p>
+                        <p class="text-on-surface-variant">サンフランシスコ・アート・インスティチュート卒</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md:col-span-7 space-y-24" id="biography">
+            <article class="space-y-12">
+                <span class="font-label text-xs tracking-widest text-outline uppercase">BIOGRAPHY</span>
+                <div class="grid grid-cols-1 gap-12">
+                    <div class="font-body text-lg leading-relaxed text-on-surface-variant space-y-6">
+                        <p>My artistic journey began at the age of three, when I first held a brush and felt the visceral connection between the hand and the canvas...</p>
+                        <p>After intensive studies in Japan, I ventured across the Pacific to the San Francisco Art Institute...</p>
+                        <p>Following San Francisco, the rhythmic energy of New York City became my teacher...</p>
+                    </div>
+                    <div class="font-headline text-base leading-[2] text-on-surface-variant/80 space-y-6 bg-surface-container-low p-8">
+                        <p>3歳から鉛筆で絵を描き始めました。4歳から書道教室に通い、線の一本一本に魂を込めること、そして余白の美学を学びました。</p>
+                        <p>日本国内で基礎を学んだ後、海を渡りサンフランシスコ・アート・インスティチュート（SFAI）へ進学。</p>
+                        <p>サンフランシスコでの経験を経て、ニューヨークのダイナミックなリズムに身を投じました。</p>
+                    </div>
+                </div>
+            </article>
+            <article class="bg-primary-container p-12 md:p-20 relative" id="statement">
+                <span class="font-label text-xs tracking-widest text-outline uppercase block mb-8">ARTIST STATEMENT</span>
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="text-3xl md:text-5xl font-headline leading-tight mb-8">
+                            "I am a painter with oil colors... Art is my life itself."
+                        </h3>
+                        <div class="font-body text-base text-on-primary-container leading-relaxed italic border-l-4 border-on-surface pl-8">
+                            My work is an exploration of the unseen—the breath between notes, the silence between words...
+                        </div>
+                    </div>
+                    <div class="pt-12 border-t border-on-surface/10">
+                        <h3 class="text-2xl md:text-3xl font-headline leading-relaxed mb-6">
+                            「私は油絵画家で芸術は私の人生そのものです。」
+                        </h3>
+                        <div class="font-headline text-sm text-on-primary-container leading-loose border-l-4 border-on-surface/40 pl-8">
+                            私の作品は、目に見えないものへの探求です。音と音の間の呼吸、言葉と言葉の間の沈黙。油彩という物質的で重みのある媒体を通じ、記憶や感情という儚い本質を捉えようとしています。
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-24 bg-surface-container-highest" id="exhibitions">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-headline tracking-widest uppercase mb-16 text-center">EXHIBITIONS</h2>
+            <div class="space-y-0">
+                <div class="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/30 group hover:bg-surface transition-colors px-6">
+                    <span class="font-label text-sm text-outline mb-2 md:mb-0">2025</span>
+                    <h4 class="text-xl md:text-2xl font-headline text-on-background group-hover:translate-x-4 transition-transform text-center md:text-left">Flower 2025</h4>
+                    <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Ginza Gallery, Tokyo</span>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/30 group hover:bg-surface transition-colors px-6">
+                    <span class="font-label text-sm text-outline mb-2 md:mb-0">2024</span>
+                    <h4 class="text-xl md:text-2xl font-headline text-on-background group-hover:translate-x-4 transition-transform text-center md:text-left">Selection I: Contemporary Pulse</h4>
+                    <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Modern Art West, San Francisco</span>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/30 group hover:bg-surface transition-colors px-6">
+                    <span class="font-label text-sm text-outline mb-2 md:mb-0">2023</span>
+                    <h4 class="text-xl md:text-2xl font-headline text-on-background group-hover:translate-x-4 transition-transform text-center md:text-left">Mariko: Solo Exhibition</h4>
+                    <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">The Curator Space, New York</span>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/30 group hover:bg-surface transition-colors px-6 bg-primary-fixed-dim/10">
+                    <span class="font-label text-sm text-primary mb-2 md:mb-0">Award</span>
+                    <h4 class="text-xl md:text-2xl font-headline text-on-background group-hover:translate-x-4 transition-transform text-center md:text-left">World Peaces Award</h4>
+                    <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Global Arts Foundation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-24" id="contact">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-headline tracking-widest uppercase mb-12 text-center md:text-left">CONTACT</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start bg-surface-container-low p-8 md:p-16">
+                <div>
+                    <span class="font-label text-xs tracking-widest text-outline uppercase block mb-4">Direct Email</span>
+                    <a class="block font-headline text-xl md:text-2xl hover:text-primary transition-colors mb-2" href="mailto:studio@marikoaida.com">studio@marikoaida.com</a>
+                    <p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                        For availability of works, exhibition opportunities, or studio visits, please reach out via email.
+                    </p>
+                </div>
+                <div>
+                    <span class="font-label text-xs tracking-widest text-outline uppercase block mb-6">Social Channels</span>
+                    <div class="flex flex-col space-y-4">
+                        <a class="font-label text-sm uppercase tracking-[0.3em] flex items-center group" href="https://www.instagram.com/marikoartlover?igsh=MWhka2s2dmpzZ2k1bw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                            <span class="mr-4 group-hover:translate-x-2 transition-transform">Instagram</span>
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+                        </a>
+                        <a class="font-label text-sm uppercase tracking-[0.3em] flex items-center group" href="#">
+                            <span class="mr-4 group-hover:translate-x-2 transition-transform">Artsys</span>
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+                        </a>
+                        <a class="font-label text-sm uppercase tracking-[0.3em] flex items-center group" href="#">
+                            <span class="mr-4 group-hover:translate-x-2 transition-transform">Foundation</span>
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full py-12 px-6 md:px-12 bg-[#f3f4f1] dark:bg-[#1A1A1A] flex flex-col md:flex-row justify-between items-center">
+        <div class="font-mono text-[9px] tracking-[0.3em] uppercase text-[#5f5e5e] dark:text-[#e5e2e1] opacity-70 mb-8 md:mb-0">
+            © 2024 MARIKO AIDA. ALL RIGHTS RESERVED.
+        </div>
+        <div class="flex space-x-8 font-mono text-[9px] tracking-[0.3em] uppercase text-[#5f5e5e] dark:text-[#e5e2e1]">
+           <a class="opacity-70 hover:opacity-100 hover:underline underline-offset-4 transition-opacity duration-300" href="https://www.instagram.com/marikoartlover?utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="opacity-70 hover:opacity-100 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Artsys</a>
+            <a class="opacity-70 hover:opacity-100 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Foundation</a>
+        </div>
+    </footer>
+</main>
+
+<a class="fixed bottom-12 right-12 z-50 w-12 h-12 bg-on-background text-background flex items-center justify-center hover:scale-110 transition-transform" href="#">
+    <span class="material-symbols-outlined" data-icon="arrow_upward">arrow_upward</span>
+    <span class="sr-only">Top</span>
+</a>
+</body>
+</html>
