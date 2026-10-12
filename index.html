@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>MARIKO AIDA | Artist Portfolio</title>
+    <title>MARIKO AIDA | Artist Portfolio - 相田麻里子 画家 公式サイト</title>
+    <meta name="description" content="画家・相田麻里子（Mariko Aida）の公式アーティストポートフォリオ。油彩画作品ギャラリー、プロフィール、展示情報をご紹介します。"/>
+    <meta name="keywords" content="相田麻里子, Mariko Aida, 画家, アーティスト, 現代アート, 油彩画, 絵画, Contemporary Art, Painter, Artist Portfolio,流山 画家"/>
     
     <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
     <link rel="icon" href="images/favicon/favicon-32.png" type="image/png">
@@ -106,9 +108,9 @@
             <a class="text-[#5f5e5e]/60 dark:text-[#e5e2e1]/60 hover:text-[#2f3331] transition-colors duration-500" href="#contact">Contact</a>
         </div>
         <div class="flex items-center space-x-3 font-label text-xs tracking-widest border-l border-outline-variant/30 pl-8">
-            <button class="text-on-background font-bold border-b border-on-background"></button>
+            <button class="text-on-background font-bold border-b border-on-background">EN</button>
             <span class="text-outline-variant/30">|</span>
-            <button class="text-on-surface-variant hover:text-on-background transition-colors"></button>
+            <button class="text-on-surface-variant hover:text-on-background transition-colors">JP</button>
         </div>
         <button id="menuButton" class="md:hidden text-on-background z-50 relative">
             <span class="material-symbols-outlined">menu</span>
@@ -170,7 +172,6 @@
             <span class="font-label text-sm tracking-widest text-outline">SELECTED OIL WORKS / 2023-2025</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
-            <!-- 各Galleryアイテムは構造的に正しいのでそのまま維持 -->
             <div class="flex flex-col space-y-6 group">
                 <div class="aspect-[4/5] overflow-hidden bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 border-[0.5px] border-outline-variant/20" alt="The unknown planet in Cosmo." src="images/works/01.webp"/>
@@ -183,7 +184,6 @@
                     <span class="font-label text-xs py-1 px-3 border border-outline-variant">2023</span>
                 </div>
             </div>
-            <!-- 他の作品も同様に最適化 -->
             <div class="flex flex-col space-y-6 group">
                 <div class="aspect-[3/4] overflow-hidden bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 border-[0.5px] border-outline-variant/20" alt="I love NY" src="images/works/02.webp"/>
@@ -196,7 +196,6 @@
                     <span class="font-label text-xs py-1 px-3 border border-outline-variant">2023</span>
                 </div>
             </div>
-            <!-- ...中略... -->
             <div class="flex flex-col space-y-6 group">
                 <div class="aspect-[4/5] overflow-hidden bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 border-[0.5px] border-outline-variant/20" alt="The flower" src="images/works/03.webp"/>
@@ -369,7 +368,8 @@
     </footer>
 </main>
 
-<a class="fixed bottom-12 right-12 z-50 w-12 h-12 bg-on-background text-background flex items-center justify-center hover:scale-110 transition-transform" href="#" aria-label="Scroll to top">
+<!-- 1. トップに戻るボタンをアイコンのみに修正 -->
+<a class="fixed bottom-12 right-12 z-50 w-12 h-12 bg-on-background text-background flex items-center justify-center hover:scale-110 transition-transform shadow-lg" href="#" aria-label="Scroll to top">
     <span class="material-symbols-outlined">arrow_upward</span>
 </a>
 
@@ -381,7 +381,6 @@ const links = document.querySelectorAll('.mobile-link');
 // メニューの開閉
 btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
-    // メニューが開いているときはスクロール不可にする
     document.body.style.overflow = menu.classList.contains('hidden') ? '' : 'hidden';
 });
 
